@@ -7,7 +7,7 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import TypedName from '@/components/TypedName';
 import { useTheme } from '@/hooks/useTheme';
-import SocialLinks from '@/components/SocialLinks';
+
 
 const Index = () => {
   // Initialize theme

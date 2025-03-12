@@ -4,7 +4,6 @@ import SectionTitle from './SectionTitle';
 import ProfileImage from './ProfileImage';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { SKILLS } from '@/lib/constants';
-import SocialLinks from '@/components/SocialLinks';
 
 const About: React.FC = () => {
   const contentRef = useScrollReveal();
