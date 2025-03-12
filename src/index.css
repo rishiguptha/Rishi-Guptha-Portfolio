@@ -82,7 +82,7 @@ html {
 
 @layer components {
   .glass-panel {
-    @apply bg-background/60 backdrop-blur-md border border-border/30 shadow-sm;
+    @apply bg-background/60 backdrop-blur-md border border-border/30 shadow-sm hover:shadow-md transition-all duration-300;
   }
   
   .focus-ring {
@@ -128,5 +128,79 @@ html {
   
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  }
+
+  /* New interactive elements */
+  .magnetic-button {
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .tilt-on-hover {
+    @apply transition-transform duration-300 hover:rotate-1;
+  }
+
+  .ripple-effect {
+    @apply absolute bg-primary/20 rounded-full animate-ripple;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .magnetic-item {
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .text-hover-effect {
+    @apply relative inline-block overflow-hidden;
+  }
+  
+  .text-hover-effect::after {
+    @apply content-[''] absolute bg-primary/20 w-full h-full left-0 -bottom-full transition-all duration-300 rounded-md z-[-1];
+  }
+  
+  .text-hover-effect:hover::after {
+    @apply bottom-0;
+  }
+
+  .parallax-tilt {
+    @apply transition-transform duration-300 ease-out perspective-[1000px];
+  }
+  
+  .float-animation {
+    @apply animate-float;
+  }
+
+  .shake-animation:hover {
+    @apply animate-pulse;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .animate-ripple {
+    animation: ripple 1s ease-out forwards;
   }
 }
