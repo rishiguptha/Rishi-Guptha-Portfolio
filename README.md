@@ -76,5 +76,4 @@ git push origin feature/my-feature
 Built with clarity and efficiency by Rishi Guptha.
 
 ---
-
 Please review this preview and let me know if you'd like any modifications or additional details.

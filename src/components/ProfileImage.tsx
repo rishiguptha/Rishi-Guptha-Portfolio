@@ -24,7 +24,7 @@ const ProfileImage: React.FC = () => {
         
         {/* Profile image */}
         <img
-          src="/assets/images/profile.jpeg"
+          src="/public/profile.jpeg"
           alt="Profile"
           className={`w-full h-full object-cover transition-all duration-700 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} ${isHovered ? 'scale-110' : 'scale-100'}`}
           onLoad={() => setIsLoaded(true)}
