@@ -1,4 +1,4 @@
-export const RESUME_URL = './public/assets/docs/resume.pdf';
+export const RESUME_URL = './public/Rishi Guptha Resume.pdf';
 
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
