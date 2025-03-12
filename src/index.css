@@ -1,69 +1,68 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 99%;
+    --foreground: 240 5% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 240 5% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 240 5% 10%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 240 5% 34%;
+    --primary-foreground: 0 0% 99%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 5% 34%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 5% 34%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 99%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 240 5% 90%;
+    --input: 240 5% 90%;
+    --ring: 240 5% 34%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 240 5% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 240 5% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 240 5% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 0 0% 85%;
+    --primary-foreground: 240 5% 12%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 240 3% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 3% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 3% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 60% 30%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 3% 18%;
+    --input: 240 3% 18%;
+    --ring: 240 5% 65%;
   }
 }
 
@@ -83,7 +82,7 @@ html {
 
 @layer components {
   .glass-panel {
-    @apply bg-background/50 backdrop-blur-lg border border-border/50 shadow-sm;
+    @apply bg-background/60 backdrop-blur-md border border-border/30 shadow-sm;
   }
   
   .focus-ring {
@@ -108,7 +107,7 @@ html {
 
   /* Enhanced styles for interactivity */
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
   }
   
   .pulse-on-hover {
@@ -116,15 +115,15 @@ html {
   }
   
   .gradient-border {
-    @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-lg before:bg-gradient-to-r before:from-primary/50 before:to-primary/20 before:-z-10 before:animate-pulse-subtle;
+    @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-lg before:bg-gradient-to-r before:from-primary/30 before:to-primary/10 before:-z-10 before:animate-pulse-subtle;
   }
   
   .text-glow {
-    @apply transition-all duration-300 hover:text-primary hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.3)];
+    @apply transition-all duration-300 hover:text-primary hover:drop-shadow-[0_0_8px_rgba(0,0,0,0.2)];
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98];
+    @apply transition-all duration-300 hover:shadow-md hover:scale-[1.01] active:scale-[0.99];
   }
   
   .text-gradient {

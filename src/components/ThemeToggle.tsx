@@ -9,17 +9,16 @@ const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-secondary hover:bg-secondary/80 focus-ring transition-all duration-500 hover:scale-110 active:scale-90 relative overflow-hidden"
+      className="p-2 rounded-full bg-secondary/80 hover:bg-secondary/60 focus-ring transition-all duration-300 hover:scale-105 active:scale-95"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
-      <div className="relative z-10">
+      <div className="relative">
         {theme === 'light' ? (
-          <Moon className="h-5 w-5 text-foreground" />
+          <Moon className="h-5 w-5 text-foreground/80" />
         ) : (
-          <Sun className="h-5 w-5 text-foreground" />
+          <Sun className="h-5 w-5 text-foreground/80" />
         )}
       </div>
-      <span className={`absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent transition-opacity duration-300 ${theme === 'light' ? 'opacity-0' : 'opacity-100'}`}></span>
     </button>
   );
 };
