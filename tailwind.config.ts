@@ -98,6 +98,14 @@ export default {
 						opacity: '0.8'
 					},
 				},
+				'pulse-color': {
+					'0%, 100%': {
+						backgroundColor: 'hsl(var(--primary) / 0.2)'
+					},
+					'50%': {
+						backgroundColor: 'hsl(var(--primary) / 0.5)'
+					},
+				},
 				'scale-in': {
 					'0%': {
 						opacity: '0',
@@ -124,6 +132,25 @@ export default {
 						backgroundPosition: '500px 0'
 					},
 				},
+				'gradient-move': {
+					'0%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					},
+					'100%': {
+						backgroundPosition: '0% 50%'
+					},
+				},
+				'rotate-slow': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -132,8 +159,11 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'scale-in': 'scale-in 0.3s ease-out forwards',
 				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+				'pulse-color': 'pulse-color 3s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'shimmer': 'shimmer 2s infinite linear',
+				'gradient-move': 'gradient-move 3s ease infinite',
+				'rotate-slow': 'rotate-slow 8s linear infinite',
 			},
 			transitionDuration: {
 				'2000': '2000ms',
