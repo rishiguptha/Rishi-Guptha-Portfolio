@@ -1,69 +1,80 @@
-# Welcome to your Lovable project
+# Rishi Guptha Mankala Portfolio
 
-## Project info
+## Description
 
-**URL**: https://lovable.dev/projects/b98079f3-32d7-4288-ba85-18123c23fca7
+This project is a professional portfolio website built with [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Vite](https://vitejs.dev/). The site uses [Tailwind CSS](https://tailwindcss.com/) for styling and leverages several modern web techniques such as CSS transitions, transforms, and the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for scroll reveal effects. The code is organized into reusable components and custom hooks, making it easy to maintain and extend.
 
-## How can I edit this code?
+## Interesting Techniques
 
-There are several ways of editing your application.
+- **Scroll Reveal with Intersection Observer:**  
+  Elements become visible as they enter the viewport using the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). See [src/hooks/useScrollReveal.tsx](./src/hooks/useScrollReveal.tsx) for details.
 
-**Use Lovable**
+- **Parallax Tilt Effect:**  
+  The project cards implement a 3D parallax tilt effect on hover using CSS transforms and transitions. Learn more about [CSS Transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) and [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b98079f3-32d7-4288-ba85-18123c23fca7) and start prompting.
+- **Responsive Design with Tailwind CSS:**  
+  Responsive layouts are achieved using Tailwind’s mobile-first utility classes. This ensures the site adapts smoothly to various screen sizes.
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Dynamic Theming:**  
+  A custom hook manages theme switching between light and dark modes, utilizing CSS variables and the [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query.
 
-**Use your preferred IDE**
+## Non-Obvious Technologies and Libraries
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Vite:** Fast development and optimized production builds. [Vite Documentation](https://vitejs.dev/).
+- **Radix UI:** Provides accessible, unstyled UI components. [Radix UI](https://www.radix-ui.com/).
+- **shadcn-ui:** A collection of high-quality UI components built on top of Radix UI and Tailwind CSS.
+- **react-resizable-panels:** Enables resizable layouts. [react-resizable-panels](https://github.com/romainberger/react-resizable-panels).
+- **embla-carousel-react:** A lightweight carousel library. [Embla Carousel](https://www.embla-carousel.com/).
+- **cmdk:** A command menu component for React, ideal for quick navigation. [cmdk on GitHub](https://github.com/pacocoursey/cmdk).
+- **sonner:** A notification system that enhances user feedback. [Sonner on GitHub](https://github.com/sonner-io/sonner).
+- **vaul:** A library for building accessible drawers and modals. [Vaul on GitHub](https://github.com/vauljs/vaul).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Project Structure
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```plaintext
+rishiguptha-rishi-guptha-portfolio/
+├── public/                  # Static assets and public files.
+├── src/
+│   ├── components/          # Reusable React components (e.g., [About.tsx](./src/components/About.tsx), [Navbar.tsx](./src/components/Navbar.tsx), [ProjectCard.tsx](./src/components/ProjectCard.tsx)).
+│   ├── hooks/               # Custom hooks (e.g., [useTheme.tsx](./src/hooks/useTheme.tsx), [useScrollReveal.tsx](./src/hooks/useScrollReveal.tsx)).
+│   ├── lib/                 # Constants and utility functions (e.g., [constants.ts](./src/lib/constants.ts), [utils.ts](./src/lib/utils.ts)).
+│   ├── pages/               # Page components (e.g., [Index.tsx](./src/pages/Index.tsx), [NotFound.tsx](./src/pages/NotFound.tsx)).
+│   ├── App.tsx              # Main App component.
+│   ├── main.tsx             # Application entry point.
+│   └── index.css            # Global styles and Tailwind CSS configuration.
+├── package.json             # Project metadata and dependencies.
+├── tsconfig.json            # TypeScript configuration.
+├── vite.config.ts           # Vite build configuration.
+└── README.md                # This documentation file.
 ```
+- public/: Contains static files such as images and other assets.
+- src/components/: Houses all the React components that make up the site.
+- src/hooks/: Includes custom hooks for state management, theming, and scroll effects.
+- src/lib/: Contains constants and utility functions used across the project.
+- src/pages/: Defines the main pages, including the home page and error pages.
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contributing
+Contributions are welcome! To contribute:
 
-**Use GitHub Codespaces**
+1. Fork the repository.
+2. Create a new branch:
+```plaintext
+git checkout -b feature/my-feature
+```
+3. Make your changes and commit them:
+```plaintext
+git commit -m 'Add my feature'
+```
+4. Push your branch:
+```plaintext
+git push origin feature/my-feature
+```
+5. Open a pull request.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+Built with clarity and efficiency by Rishi Guptha Mankala.
 
-This project is built with .
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b98079f3-32d7-4288-ba85-18123c23fca7) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Please review this preview and let me know if you'd like any modifications or additional details.
