@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ProjectCardProps {
@@ -67,48 +66,42 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
         />
       </div>
       
-      <div className="p-6 relative z-10">
-        <h3 
-          className="text-xl font-bold mb-2 group-hover:text-primary transition-colors text-hover-effect"
-          onMouseEnter={(e) => {
-            e.currentTarget.classList.add('text-primary');
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.classList.remove('text-primary');
-          }}
-        >
-          {title}
-        </h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span 
-              key={tech} 
-              className={`px-2 py-1 rounded-md text-xs font-medium transition-all duration-300 cursor-pointer shake-animation ${activeIndex === index ? 'bg-primary text-primary-foreground scale-110' : 'bg-secondary text-secondary-foreground'}`}
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(-1)}
-            >
-              {tech}
-            </span>
-          ))}
+      <div className="p-6 relative z-10 flex flex-col min-h-[250px]">
+        <div className="flex-grow">
+          <h3 
+            className="text-xl font-bold mb-2 group-hover:text-primary transition-colors text-hover-effect"
+            onMouseEnter={(e) => {
+              e.currentTarget.classList.add('text-primary');
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.classList.remove('text-primary');
+            }}
+          >
+            {title}
+          </h3>
+          <p className="text-muted-foreground mb-4">{description}</p>
+          <div className="flex flex-wrap gap-2">
+            {technologies.map((tech, index) => (
+              <span 
+                key={tech} 
+                className={`px-2 py-1 rounded-md text-xs font-medium transition-all duration-300 cursor-pointer shake-animation ${activeIndex === index ? 'bg-primary text-primary-foreground scale-110' : 'bg-secondary text-secondary-foreground'}`}
+                onMouseEnter={() => setActiveIndex(index)}
+                onMouseLeave={() => setActiveIndex(-1)}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
-      
-      <div 
-        className={`absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6 ${isHovered ? 'translate-y-0' : 'translate-y-8'} transition-transform duration-300`}
-        style={{ transform: `translateZ(${isHovered ? '20px' : '0px'})` }}
-      >
-        <button 
-          className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium transition-all duration-300 hover:scale-110 active:scale-90 shadow-lg hover:shadow-xl"
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-          }}
-        >
-          View Project
-        </button>
+        
+        {/* View Project Button */}
+        <div className="mt-4">
+          <button 
+            className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+          >
+            View Project
+          </button>
+        </div>
       </div>
       
       {/* Decorative corner element */}

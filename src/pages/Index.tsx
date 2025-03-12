@@ -7,6 +7,7 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import TypedName from '@/components/TypedName';
 import { useTheme } from '@/hooks/useTheme';
+import SocialLinks from '@/components/SocialLinks';
 
 const Index = () => {
   // Initialize theme
@@ -21,16 +22,15 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Hello, I'm{' '}
             <TypedName 
-              text="Your Name" 
+              text="Rishi Guptha Mankala" 
               speed={150} 
               className="text-gradient font-extrabold" 
             />
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Frontend Developer & UX Designer crafting exceptional digital experiences
+            Data Scientist & Engineer turning complex data into actionable insights.
           </p>
         </div>
-        
         <About />
         <Resume />
         <Projects />
@@ -38,12 +38,12 @@ const Index = () => {
       </main>
       
       <footer className="py-8 text-center border-t border-border/50">
-        <div className="container mx-auto px-4">
-          <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <div className="container mx-auto px-4">
+        <p className="text-muted-foreground">
+          © {new Date().getFullYear()} Rishi Guptha Mankala. All rights reserved.
+        </p>
+      </div>
+    </footer>
     </div>
   );
 };
