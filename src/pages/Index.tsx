@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Resume from '@/components/Resume';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import TypedName from '@/components/TypedName';
 import { useTheme } from '@/hooks/useTheme';
 
 const Index = () => {
@@ -16,6 +17,20 @@ const Index = () => {
       <Navbar />
       
       <main className="pt-20">
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Hello, I'm{' '}
+            <TypedName 
+              text="Your Name" 
+              speed={150} 
+              className="text-gradient font-extrabold" 
+            />
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Frontend Developer & UX Designer crafting exceptional digital experiences
+          </p>
+        </div>
+        
         <About />
         <Resume />
         <Projects />
