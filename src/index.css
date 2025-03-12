@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -168,7 +169,7 @@ html {
   }
 
   .parallax-tilt {
-    @apply transition-transform duration-300 ease-out perspective-[1000px];
+    @apply transition-transform duration-300 ease-out perspective-1000;
   }
   
   .float-animation {
