@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import SectionTitle from './SectionTitle';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/constants';
 
 const Contact: React.FC = () => {
@@ -46,38 +45,49 @@ const Contact: React.FC = () => {
       <SectionTitle title="CONTACT" subtitle="Get In Touch" />
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Left side: Let's Talk + contact info */}
         <div ref={infoRef}>
           <div className="glass-panel p-8 rounded-2xl h-full">
             <h3 className="text-2xl font-bold mb-6">Let's Talk</h3>
             <p className="text-muted-foreground mb-8">
-              Feel free to reach out if you have any questions or want to discuss a potential project. I'm always open to new opportunities and challenges!
+              Feel free to reach out if you have any questions or want to discuss a potential project.
+              I'm always open to new opportunities and challenges!
             </p>
             
             <div className="space-y-6">
+              {/* Email */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href={`mailto:${CONTACT_INFO.email}`}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {CONTACT_INFO.email}
                   </a>
                 </div>
               </div>
               
+              {/* Phone */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <a href={`tel:${CONTACT_INFO.phone}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href={`tel:${CONTACT_INFO.phone}`}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {CONTACT_INFO.phone}
                   </a>
                 </div>
               </div>
               
+              {/* Location */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <MapPin className="h-5 w-5" />
@@ -89,10 +99,48 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
               </div>
+
+              {/* Social Links */}
+              <div className="flex items-center space-x-4">
+                {/* GitHub */}
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <Github className="h-5 w-5" />
+                </div>
+                <div>
+                  <h4 className="font-medium">GitHub</h4>
+                  <a
+                    href="https://github.com/rishiguptha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    github.com/rishiguptha
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                {/* LinkedIn */}
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <Linkedin className="h-5 w-5" />
+                </div>
+                <div>
+                  <h4 className="font-medium">LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/rishi-guptha/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    linkedin.com/in/rishi-guptha
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         
+        {/* Right side: Contact form */}
         <div ref={formRef}>
           <form onSubmit={handleSubmit} className="glass-panel p-8 rounded-2xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
