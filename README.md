@@ -73,7 +73,7 @@ git push origin feature/my-feature
 5. Open a pull request.
 
 
-Built with clarity and efficiency by Rishi Guptha Mankala.
+Built with clarity and efficiency by Rishi Guptha.
 
 ---
 
